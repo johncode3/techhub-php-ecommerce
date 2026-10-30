@@ -1,0 +1,512 @@
+.product-header{
+    text-align: center;
+    padding: 20px;
+    background-image: url(../../images/image2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    position: relative;
+    max-height: 250px;
+}
+.page-title{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: relative;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+.page-description{
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    -webkit-text-stroke: 1px white;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 0 0 60px;
+}
+.filter-sidebar{
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    height: fit-content;
+}
+
+.filter-close {
+    display: none;
+}
+.filter-widget{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+.filter-title{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+.category-item label ,span{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.category-item input[type="checkbox"]{
+    margin-right: 10px;
+}
+/* 1. Base List Style (What you just wrote) */
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 2. The Item Layout */
+.category-item {
+    margin-bottom: 8px; /* Spacing between items */
+}
+
+/* 3. The Link Logic */
+.category-item a {
+    text-decoration: none;
+    color: #555; /* Neutral grey */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* 4. HOVER: The "Interactive" feel */
+.category-item a:hover {
+    background-color: #f0f7ff; /* Very light blue */
+    color: var(--primary-color);
+    padding-left: 15px; /* Subtle slide effect */
+}
+
+/* 5. ACTIVE: The "You are here" feel */
+/* Remember we added the 'active-filter' class in PHP earlier! */
+.category-item a.active-filter {
+    background-color: var(--primary-color);
+    color: white !important;
+    font-weight: 600;
+}
+
+/* 6. The Count Badge inside the link */
+.item-count {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    background: #eee;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* Change count color when link is active */
+.category-item a.active-filter .item-count {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.filter-title::after{
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+.price-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+.price-content label{
+    font-size: 14px;
+    font-weight: 600;
+}
+.price-content p{
+    font-size: 16px;
+    font-weight: 700;
+}
+.range-slider{
+    width: 200px;
+    position: relative;
+    margin: 15px;
+    margin-top: 10px;
+}
+
+/* Product-toolbar */
+.product-toolbar {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Top Row */
+.toolbar-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.products-count {
+    font-size: 0.95rem;
+    color: #555;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid #e0e0e0;
+}
+
+/* Bottom Row */
+.toolbar-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Active Filters */
+.toolbar-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    min-height: 40px;
+}
+
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
+    transition: all 0.2s ease;
+}
+
+.filter-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+}
+
+.filter-tag button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.filter-tag button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.toolbar-left .clear-all {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.toolbar-left .clear-all:hover {
+    background: #e9ecef;
+    border-color: #ced4da;
+    color: #333;
+}
+
+.filters-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-left: 5px;
+}
+
+/* Right: Search & Controls */
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Search Box */
+.search-within {
+    position: relative;
+    min-width: 200px;
+}
+
+.search-within input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    background: white;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-within input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.search-btn:hover {
+    color: #0066cc;
+}
+
+/* Control Group */
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Sort Select */
+.sort-options {
+    position: relative;
+}
+
+.sort-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 35px 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    min-width: 180px;
+    transition: all 0.3s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230066cc' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.sort-select option {
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+/* View Options */
+.view-option {
+    display: flex;
+    gap: 2px;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.view-btn {
+    padding: 8px;
+    border: none;
+    background: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #666;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.view-btn:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.view-btn.active {
+    background: #0066cc;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 102, 204, 0.2);
+}
+/* In your products.css */
+.product-main .product-grid {
+    display: grid;
+    /* Exactly 3 columns on Desktop */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+}
+
+/* Match Home page button sizing inside shop grid */
+.product-main .btn.btn-block.add-to-cart {
+    padding: 14px 16px;
+    font-size: 1rem;
+}
+
+/* On Tablets, show 2 columns */
+@media (max-width: 992px) {
+    .product-main .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* On Mobile, show 1 column or 2 small ones */
+@media (max-width: 576px) {
+    .product-main .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pagination (reuse admin pagination styles for shop page) */
+.product-main .admin-table-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product-main .admin-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.product-main .pagination-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f4f4f9;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+}
+
+.product-main .pagination-link.active,
+.product-main .pagination-link:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.product-main .pagination-dots {
+    color: #888;
+    padding: 0 4px;
+}
+
+.product-main .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    font-weight: 600;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+    box-shadow: 0 1px 3px rgba(74,108,247,0.07);
+}
+
+.product-main .btn:hover,
+.product-main .btn:focus {
+    background: #2746a6;
+    color: #fff;
+    text-decoration: none;
+}
+
+.product-main .btn-edit {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.product-main .btn-edit:hover,
+.product-main .btn-edit:focus {
+    background: #2746a6;
+}

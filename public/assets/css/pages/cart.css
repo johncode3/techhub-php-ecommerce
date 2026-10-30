@@ -1,0 +1,322 @@
+.cart-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.cart-title {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-color);
+    text-align: center;
+}
+
+.cart-table{
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: var(--light-color);
+    border-bottom: 2px solid #e9ecef;
+    font-weight: 600;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid var(--light-color);
+    align-items: center;
+    transition: var(--transition);
+}
+
+.table-row:hover {
+    background: #fafafa;
+}
+
+/* Product Column */
+.col-product .product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.col-product img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: var(--light-color);
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.col-product h3 {
+    margin: 0 0 8px 0;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.product-variant {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+.col-price .price {
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+
+.col-quantity .quantity-controls {
+    display: flex;
+    align-items: center;
+    max-width: 120px;
+}
+
+.col-quantity input {
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0 5px;
+    font-weight: 500;
+}
+
+.col-subtotal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-subtotal .subtotal {
+    font-weight: 700;
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 8px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.remove-btn:hover {
+    background: #ffeaea;
+    transform: scale(1.1);
+}
+
+.cart-actions {
+    margin-bottom: 30px;
+}
+
+.return-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 0;
+    transition: var(--transition);
+}
+
+.return-btn:hover {
+    gap: 12px;
+    text-decoration: underline;
+}
+
+/* Cart Bottom Section - Two Columns */
+.cart-bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Coupon Box (Left) */
+.coupon-box {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    height: fit-content;
+}
+
+.coupon-box h3 {
+    color: var(--dark-color);
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.coupon-box p {
+    color: var(--secondary-color);
+    margin: 0 0 20px 0;
+    font-size: 0.95rem;
+}
+
+.coupon-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.coupon-input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.coupon-input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+}
+
+.apply-coupon-btn {
+    padding: 12px 25px;
+    background: var(--dark-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.apply-coupon-btn:hover {
+    background: #495057;
+    transform: translateY(-1px);
+}
+
+/* Cart Totals Box (Right) */
+.cart-totals-box {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    height: fit-content;
+}
+
+.cart-totals-box h3 {
+    color: var(--dark-color);
+    margin: 0 0 25px 0;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-color);
+}
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.shipping-option {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.grand-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--light-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.total-amount {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background: #3a5df6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(74, 108, 247, 0.3);
+}
+
+.coupon-box {
+    border-left: 5px solid var(--primary-color);
+}
+
+.cart-totals-box {
+    border-right: 5px solid var(--success-color);
+}
+
+/* Empty Cart State */
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.empty-cart i {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.empty-cart h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.empty-cart p {
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.shipping-free::after {
+    content: " 🚀";
+}

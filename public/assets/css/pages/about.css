@@ -1,0 +1,101 @@
+.about-us-title{
+    text-align: left;
+    margin-top: -80px;
+    margin-bottom: 100px;
+    font-weight: 800;
+    font-size: 2rem;
+
+}
+
+/* SECTION 1: 3D Man with middle-aligned text */
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+    margin-left: 0;
+    min-height: 500px;
+}
+
+.tech-man {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.man-text {
+    align-self: center;
+    margin-left: 0;
+}
+
+/* SECTION 2: Founder split */
+.founder-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.about-kakkada{
+    margin-top: 40px;
+}
+
+.kakkada-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 0 auto;
+    width: min(360px, 100%);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 4px solid #007bff;
+}
+
+/* About page responsive */
+@media (max-width: 768px) {
+    .about-us-title{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .man-container{
+        margin-left: 0;
+    }
+    .kakkada-card{
+        width:300px;
+        margin: 0 auto;
+        justify-content: center;
+        offset: 0;
+    }
+    .hero-split,
+    .founder-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-split {
+        min-height: auto;
+    }
+    .about-kakkada{
+        text-align: center;
+    }
+    .about-kakkada li{
+        list-style: none;
+    }
+    
+    .man-text {
+        text-align: center;
+    }
+    .man-text li{
+        list-style: none;
+    }
+}

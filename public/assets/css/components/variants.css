@@ -1,0 +1,76 @@
+/* Product Variants */
+.product-variants {
+    margin-bottom: 25px;
+}
+
+.variant-option {
+    margin-bottom: 25px;
+}
+
+.variant-option h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.color-option {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-width: 70px;
+    text-align: center;
+}
+
+.color-option:hover {
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+.color-option.active {
+    border-width: 3px;
+    font-weight: 700;
+    background-color: #e1eefc;
+    border-color: var(--primary-color);
+}
+
+.storage-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.storage-option {
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    min-width: 70px;
+    text-align: center;
+}
+
+.storage-option:hover {
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+.storage-option.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}

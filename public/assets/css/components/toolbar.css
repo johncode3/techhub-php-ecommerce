@@ -1,0 +1,5 @@
+/* Hover effect for toolbar */
+.product-toolbar:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: #d0d0d0;
+}

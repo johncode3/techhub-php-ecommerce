@@ -1,0 +1,44 @@
+/* Product Specifications table of the product detail page  */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+.specs-table tr {
+    border-bottom: 1.5px solid var(--dark-color);
+    transition: background 0.2s;
+}
+
+.specs-table tr:hover {
+    background: #eeeeee;
+}
+
+.specs-table td {
+    padding: 18px 15px;
+    vertical-align: top;
+}
+
+.specs-table td:first-child {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    width: 200px;
+    border-right: 1px solid var(--dark-color);
+    background: #eeeeee;
+}
+
+.specs-table td:last-child {
+    font-size: 0.7rem;
+    color: #373737;
+    line-height: 1.5;
+}
+
+/* Cart Table Styles */
+.cart-table {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    margin-bottom: 30px;
+}

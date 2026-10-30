@@ -1,0 +1,61 @@
+/* Mobile-specific components */
+/* Show mobile filter button */
+.mobile-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile filter overlay */
+.filter-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.filter-overlay.active {
+    display: block;
+}
+
+/* Filter sidebar close button */
+.filter-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .view-btn,
+    .btn-icon,
+    .search-btn,
+    .page-btn,
+    .add-to-cart {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .category-item label {
+        padding: 8px 0;
+    }
+
+    .product-action {
+        padding: 10px;
+    }
+
+    .category-item input[type="checkbox"] {
+        transform: scale(1.3);
+        margin-right: 15px;
+    }
+}

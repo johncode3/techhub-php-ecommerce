@@ -1,0 +1,17 @@
+/* Icon Styles */
+.fa-star{
+    color: rgb(255, 136, 0);
+}
+.far{
+    color: rgb(105, 105, 105);
+}
+.filter-title::after{
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+.payment-methods i:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}

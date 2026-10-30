@@ -1,0 +1,12 @@
+/config/config.local.php
+.env
+.env.*
+!.env.example
+
+# Local development files
+/vendor/
+/node_modules/
+*.log
+
+# Uploaded or generated files
+/public/uploads/
